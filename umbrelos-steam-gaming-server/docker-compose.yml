@@ -53,6 +53,7 @@ services:
       - steam-gaming-state:/var/lib/steam-headless
       - steam-gaming-journal:/var/log/journal
       - steam-gaming-games:/mnt/games
+
 volumes:
   steam-gaming-home:
   steam-gaming-state:
