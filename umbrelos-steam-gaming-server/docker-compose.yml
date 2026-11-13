@@ -55,6 +55,22 @@ services:
       - steam-gaming-journal:/var/log/journal
       - steam-gaming-games:/mnt/games
 
+  http-proxy:
+    image: caddy:2
+    container_name: steam-gaming-server-http
+    restart: unless-stopped
+    network_mode: host
+    depends_on:
+      - desktop
+    command:
+      - reverse-proxy
+      - --from
+      - http://:18080
+      - --to
+      - https://127.0.0.1:8483
+      - --change-host-header
+      - --insecure
+
 volumes:
   steam-gaming-home:
   steam-gaming-state:
