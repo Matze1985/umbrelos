@@ -1,3 +1,4 @@
+
 services:
   desktop:
     image: josh5/steam-headless:2
@@ -60,8 +61,13 @@ services:
     container_name: steam-gaming-server-http
     restart: unless-stopped
     network_mode: host
+
     depends_on:
       - desktop
+
+    entrypoint:
+      - caddy
+
     command:
       - reverse-proxy
       - --from
