@@ -14,7 +14,7 @@ services:
       - SYS_PTRACE
 
     security_opt:
-      - apparmor:unconfined
+      - apparmor=unconfined
       - seccomp=unconfined
       - systempaths=unconfined
       - writable-cgroups=true
