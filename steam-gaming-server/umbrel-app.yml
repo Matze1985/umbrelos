@@ -1,8 +1,8 @@
 manifestVersion: 1
-icon: https://raw.githubusercontent.com/Steam-Headless/docker-steam-headless/master/assets/icon.png
 id: steam-gaming-server
 category: gaming
 name: Steam Gaming Server
+icon: https://raw.githubusercontent.com/Steam-Headless/docker-steam-headless/master/assets/icon.png
 version: "1.0.0"
 tagline: Steam-Spiele mit AMD-Grafik auf Android TV streamen
 description: >-
