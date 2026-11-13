@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: steam-gaming-server
+id: umbrelos-steam-gaming-server
 category: gaming
 name: Steam Gaming Server
 icon: https://raw.githubusercontent.com/Steam-Headless/docker-steam-headless/master/assets/icon.png
