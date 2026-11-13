@@ -2,7 +2,7 @@ manifestVersion: 1
 id: umbrelos-steam-gaming-server
 category: gaming
 name: Steam Gaming Server
-icon: https://raw.githubusercontent.com/Steam-Headless/docker-steam-headless/master/assets/icon.png
+icon: https://www.citypng.com/photo/28031/steam-white-circle-icon-hd-png
 version: "1.0.0"
 tagline: Steam-Spiele mit AMD-Grafik auf Android TV streamen
 description: >-
