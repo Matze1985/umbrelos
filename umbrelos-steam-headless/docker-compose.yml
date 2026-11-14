@@ -1,4 +1,10 @@
 services:
+  app_proxy:
+    environment:
+      APP_HOST: steam-headless-http
+      APP_PORT: 18080
+      APP_PROTOCOL: http
+
   desktop:
     image: josh5/steam-headless:2
     container_name: steam-headless
@@ -55,27 +61,26 @@ services:
       - steam-headless-journal:/var/log/journal
       - steam-headless-games:/mnt/games
 
-    http-proxy:
-      image: caddy:2
-      container_name: steam-headless-http
-      restart: unless-stopped
-      network_mode: host
+  http-proxy:
+    image: caddy:2
+    container_name: steam-headless-http
+    restart: unless-stopped
 
-      depends_on:
-        - desktop
+    depends_on:
+      - desktop
 
-      entrypoint:
-        - caddy
+    entrypoint:
+      - caddy
 
-      command:
-        - reverse-proxy
-        - --from
-        - http://:18080
-        - --to
-        - https://127.0.0.1:8483
-        - --insecure
-        - --header-up
-        - "Host: {http.request.host}"
+    command:
+      - reverse-proxy
+      - --from
+      - http://:18080
+      - --to
+      - https://10.21.0.1:8483
+      - --insecure
+      - --header-up
+      - "X-Forwarded-Proto: https"
 
 volumes:
   steam-headless-home:
