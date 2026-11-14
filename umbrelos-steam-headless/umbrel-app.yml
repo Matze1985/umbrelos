@@ -2,7 +2,7 @@ manifestVersion: 1
 id: umbrelos-steam-headless
 category: gaming
 name: Steam Headless
-icon: https://github.com/Steam-Headless/docker-steam-headless/blob/master/images/steam-icon.png
+icon: https://raw.githubusercontent.com/Steam-Headless/docker-steam-headless/refs/heads/master/images/steam-icon.png
 version: "1.0.0"
 tagline: Steam-Spiele mit AMD-Grafik auf Android TV streamen
 description: >-
