@@ -1,4 +1,3 @@
-
 services:
   desktop:
     image: josh5/steam-headless:2
