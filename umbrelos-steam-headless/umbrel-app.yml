@@ -11,8 +11,8 @@ description: >-
   auf Android TV. Kein Moonlight erforderlich.
 developer: Community
 website: https://steamheadless.com/
-repo: https://github.com/Steam-Headless/docker-steam-headless
-support: https://github.com/Steam-Headless/docker-steam-headless/issues
+repo: https://github.com/Matze1985/umbrelos
+support: https://github.com/Matze1985/umbrelos/issues
 port: 8483
 gallery: []
 releaseNotes: >-
