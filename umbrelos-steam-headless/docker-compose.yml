@@ -1,8 +1,8 @@
 services:
   desktop:
     image: josh5/steam-headless:2
-    container_name: steam-gaming-server
-    hostname: steam-gaming-server
+    container_name: steam-headless
+    hostname: steam-headless
     restart: unless-stopped
     network_mode: host
 
@@ -50,14 +50,14 @@ services:
     volumes:
       - /etc/localtime:/run/host-localtime:ro
       - /sys/devices/virtual/input:/sys/devices/virtual/input:ro
-      - steam-gaming-home:/home/steamheadless
-      - steam-gaming-state:/var/lib/steam-headless
-      - steam-gaming-journal:/var/log/journal
-      - steam-gaming-games:/mnt/games
+      - steam-headless-home:/home/steamheadless
+      - steam-headless-state:/var/lib/steam-headless
+      - steam-headless-journal:/var/log/journal
+      - steam-headless-games:/mnt/games
 
     http-proxy:
       image: caddy:2
-      container_name: steam-gaming-server-http
+      container_name: steam-headless-http
       restart: unless-stopped
       network_mode: host
 
@@ -78,7 +78,7 @@ services:
         - "Host: {http.request.host}"
 
 volumes:
-  steam-gaming-home:
-  steam-gaming-state:
-  steam-gaming-journal:
-  steam-gaming-games:
+  steam-headless-home:
+  steam-headless-state:
+  steam-headless-journal:
+  steam-headless-games:
