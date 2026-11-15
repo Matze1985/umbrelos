@@ -67,26 +67,19 @@ services:
     restart: unless-stopped
     network_mode: host
 
-    depends_on:
-      - desktop
+    volumes:
+      - ${APP_DATA_DIR}/Caddyfile:/etc/caddy/Caddyfile:ro
 
     entrypoint:
       - caddy
 
     command:
-      - reverse-proxy
-      - --from
-      - http://:18080
-      - --to
-      - https://127.0.0.1:8483
-      - --insecure
-      - --header-up
-      - "Host: {http.request.hostport}"
-      - --header-up
-      - "X-Forwarded-Proto: https"
-      - --header-up
-      - "X-Forwarded-Host: {http.request.hostport}"
-      
+      - run
+      - --config
+      - /etc/caddy/Caddyfile
+      - --adapter
+      - caddyfile
+
 volumes:
   steam-headless-home:
   steam-headless-state:
