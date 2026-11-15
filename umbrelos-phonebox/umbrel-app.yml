@@ -10,9 +10,9 @@ description: >-
   Each user gets a private device with persistent storage, APK installation,
   and browser-based control through noVNC. Google Play is not included.
 developer: Community
-website: https://github.com/Matze1985/umbrelos
+website: https://github.com/pfurpass/phonebox
 repo: https://github.com/Matze1985/umbrelos
-support: https://github.com/pfurpass/phonebox/issues
+support: https://github.com/Matze1985/umbrelos/issues
 port: 80
 gallery: []
 path: ""
