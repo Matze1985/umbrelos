@@ -2,6 +2,7 @@ manifestVersion: 1
 id: umbrelos-phonebox
 category: developer
 name: Phonebox
+icon: https://raw.githubusercontent.com/pfurpass/phonebox/498523ff22169fb1422e827121a9e810ca453560/img/phonebox-rack-detailed.svg
 version: "0.0.1"
 tagline: Private multi-user Android devices in your browser
 description: >-
