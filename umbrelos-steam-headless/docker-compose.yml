@@ -76,7 +76,7 @@ services:
     command:
       - reverse-proxy
       - --from
-      - http://10.21.0.1:18080
+      - http://:18080
       - --to
       - https://127.0.0.1:8483
       - --insecure
