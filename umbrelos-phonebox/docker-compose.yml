@@ -58,7 +58,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
   init-perms:
-    image: phonebox-backend:0.1.0
+    image: alpine:3.20
     user: "0:0"
     restart: "no"
     entrypoint: ["sh", "-c"]
@@ -68,6 +68,7 @@ services:
 
   phonebox-backend:
     image: phonebox-backend:0.1.0
+    pull_policy: build
     build:
       context: .
       dockerfile: Dockerfile.backend
@@ -140,6 +141,12 @@ services:
 
   worker:
     image: phonebox-backend:0.1.0
+    pull_policy: build
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+      args:
+        PHONEBOX_REF: master
     restart: on-failure
     depends_on:
       phonebox-backend:
