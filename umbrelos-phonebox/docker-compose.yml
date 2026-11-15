@@ -67,8 +67,6 @@ services:
       - ${APP_DATA_DIR}/data/uploads:/data/uploads
 
   phonebox-backend:
-    image: phonebox-backend:0.1.0
-    pull_policy: build
     build:
       context: .
       dockerfile: Dockerfile.backend
@@ -140,8 +138,6 @@ services:
       retries: 5
 
   worker:
-    image: phonebox-backend:0.1.0
-    pull_policy: build
     build:
       context: .
       dockerfile: Dockerfile.backend
