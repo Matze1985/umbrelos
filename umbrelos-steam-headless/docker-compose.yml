@@ -1,7 +1,7 @@
 services:
   app_proxy:
     environment:
-      APP_HOST: steam-headless-http
+      APP_HOST: 10.21.0.1
       APP_PORT: 18080
       APP_PROTOCOL: http
 
@@ -65,6 +65,7 @@ services:
     image: caddy:2
     container_name: steam-headless-http
     restart: unless-stopped
+    network_mode: host
 
     depends_on:
       - desktop
@@ -75,9 +76,9 @@ services:
     command:
       - reverse-proxy
       - --from
-      - http://:18080
+      - http://10.21.0.1:18080
       - --to
-      - https://10.21.0.1:8483
+      - https://127.0.0.1:8483
       - --insecure
       - --header-up
       - "Host: {http.request.host}"
