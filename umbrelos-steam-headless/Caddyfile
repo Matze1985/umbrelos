@@ -1,0 +1,7 @@
+:18080 {
+    @browser method GET HEAD
+
+    redir @browser https://{http.request.host}:8483{uri} 302
+
+    respond "Steam Headless: Bitte HTTPS Port 8483 verwenden." 405
+}
