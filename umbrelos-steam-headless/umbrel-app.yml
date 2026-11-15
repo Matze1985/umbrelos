@@ -3,7 +3,7 @@ id: umbrelos-steam-headless
 category: gaming
 name: Steam Headless
 icon: https://raw.githubusercontent.com/Steam-Headless/docker-steam-headless/refs/heads/master/images/steam-icon.png
-version: "1.0.11"
+version: "1.0.12"
 tagline: Steam-Spiele mit AMD-Grafik auf Android TV streamen
 description: >-
   Steam Headless als Gaming-Host auf UmbrelOS. Nutzt die AMD-GPU über
