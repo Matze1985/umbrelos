@@ -80,7 +80,12 @@ services:
       - https://10.21.0.1:8483
       - --insecure
       - --header-up
+      - "Host: {http.request.host}"
+      - --header-up
       - "X-Forwarded-Proto: https"
+      - --header-up
+      - "X-Forwarded-Host: {http.request.host}"
+      
 volumes:
   steam-headless-home:
   steam-headless-state:
