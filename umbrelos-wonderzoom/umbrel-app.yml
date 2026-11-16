@@ -1,0 +1,20 @@
+manifestVersion: 1
+id: wonderzoom
+category: ai
+name: WonderZoom
+icon: https://raw.githubusercontent.com/jin-cao-tma/WonderZoom/refs/heads/main/assets/icons/favicon.ico
+version: "0.1.0"
+tagline: AMD-freundlicher 3D-Gaussian-Splat-Viewer
+description: >-
+  Speichere und erkunde 3D-Gaussian-Splat-Szenen direkt im Browser.
+  Die Darstellung läuft auf der GPU deines Browsers und benötigt kein CUDA
+  auf dem Umbrel-Server. Diese Edition enthält noch keine KI-Szenengenerierung.
+developer: Mathias Noack
+website: https://github.com/jin-cao-tma/WonderZoom
+repo: https://github.com/Matze1985/umbrelos/umbrelos-wonderzoom
+support: https://github.com/Matze1985/umbrelos/umbrelos-wonderzoom/issues
+port: 7747
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
