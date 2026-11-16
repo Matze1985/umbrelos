@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    image: wonderzoom:0.1.0
+    container_name: wonderzoom
+    restart: unless-stopped
+    ports:
+      - "7747:8080"
+    volumes:
+      - wonderzoom_scenes:/app/data/scenes
+    environment:
+      PORT: "8080"
+      SCENES_DIR: /app/data/scenes
+
+volumes:
+  wonderzoom_scenes:
