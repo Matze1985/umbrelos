@@ -7,12 +7,13 @@ services:
       APP_PORT: 8080
       PROXY_AUTH_ADD: "true"
 
-web:
-  image: ghcr.io/DEIN_GITHUB_BENUTZER/umbrelos-wonderzoom:0.1.0
-  restart: on-failure
-  stop_grace_period: 1m
-  volumes:
-    - ${APP_DATA_DIR}/scenes:/app/data/scenes
-  environment:
-    PORT: "8080"
-    SCENES_DIR: /app/data/scenes
+  web:
+    image: ghcr.io/matze1985/umbrelos-wonderzoom:0.1.0
+    restart: on-failure
+    stop_grace_period: 1m
+    init: true
+    volumes:
+      - ${APP_DATA_DIR}/scenes:/app/data/scenes
+    environment:
+      PORT: "8080"
+      SCENES_DIR: /app/data/scenes
